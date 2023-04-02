@@ -548,9 +548,41 @@ nav {
   background-color: #FCFCFC;
 }
 
-.modal-close-button{}
+.modal-close-button{
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: #E7E9FC;
+  border-radius: 50%;
+  border:0.1em solid #d5d6e3;
+  cursor: pointer;
+  transition: background-color var(--transition-duration-funktion) border var(--transition-duration-funktion);
+}
 
 .modal-close-icon{
+
   width: 8px;
-  height: 8px;
-  fill:#2E2F42;}
+  height:8px;
+  fill:#2E2F42;
+padding-top: 0;
+padding-bottom: 0;
+transition: fill var(--transition-duration-funktion);
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus{
+  background-color: var(--nav-accent-color);
+  border:0.1em solid transparent;
+}
+
+.modal-close-button:hover .modal-close-icon,
+.modal-close-button:focus .modal-close-icon{
+  fill: #FFFFFF;
+}
+
+  
